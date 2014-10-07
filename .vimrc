@@ -10,20 +10,16 @@ autocmd VimEnter * highlight LineNr ctermfg=grey
 
 " colorscheme
 set guifont=Menlo:h12
-"set background=light
-"let &t_Co=256
-"let g:solarized_visibility = "high"
-"let g:solarized_contrast = "high"
-"let g:solarized_termcolors=256
-"colorscheme solarized
+colorscheme solarized
 
 " tabs
 set tabstop=2
 set shiftwidth=2
+set expandtab
 
 " 80 lines
 set colorcolumn=80
-highlight ColorColumn ctermbg=lightgrey guibg=lightgrey
+highlight ColorColumn ctermbg=red guibg=lightgrey
 
 set scrolloff=10
 
@@ -44,7 +40,7 @@ imap <leader>" ""<ESC>i
 imap <leader>( ()<ESC>i
 imap <leader>[ []<ESC>i
 imap <leader>{ {}<ESC>i
-imap <leader>c console.log()<ESC>i
+imap <leader>c console.log('')<ESC>hi
 imap <leader>e \emph{}<ESC>i
 imap <leader>t {\ttfamily }<ESC>i
 nmap <leader>m <ESC>:LatexTOCToggle<RETURN>
@@ -59,13 +55,13 @@ set backupdir=~/.vim/backup//
 set directory=~/.vim/swap//
 set undodir=~/.vim/undo//
 
-" Latex
-let g:LatexBox_latexmk_async=1
-let g:LatexBox_latexmk_preview_continuously=1
-let g:LatexBox_viewer = "open -a Skim"
-let g:LatexBox_latexmk_options = "-pvc"
-let g:LatexBox_quickfix=2
-let g:LatexBox_quickfix=3
+" Latex break in case of emergency
+" let g:LatexBox_latexmk_async=1
+" let g:LatexBox_latexmk_preview_continuously=1
+" let g:LatexBox_viewer = "open -a Skim"
+" let g:LatexBox_latexmk_options = "-pvc"
+" let g:LatexBox_quickfix=2
+" let g:LatexBox_quickfix=3
 
 " setup pathogen to manage your plugins
 call pathogen#infect()
